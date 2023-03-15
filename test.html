@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>使用者登入</title>
+    <style>
+        /*     body {
+      background-color: #F2F2F2;
+      font-family: Arial, sans-serif;
+    } */
+        body {
+            background-image: url("campus-background.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+
+
+
+
+
+
+
+        #form {
+            background-color: #FFFFFF;
+            border: 1px solid #DDDDDD;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+
+
+
+
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            color: #333333;
+            margin-top: 0px;
+        }
+
+
+
+
+
+
+
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #333333;
+        }
+
+
+
+
+
+
+
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #DDDDDD;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #555555;
+            box-sizing: border-box;
+        }
+
+
+
+
+
+
+
+
+        input[type="submit"] {
+            background-color: red;
+            color: #FFFFFF;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+
+
+
+
+
+
+
+        input[type="submit"]:hover {
+            background-color: #3E8E41;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+
+
+<body>
+<div id="form">
+    <h1>使用者登入</h1>
+    <label for="username">用戶名：</label>
+    <input type="text" id="username" name="username">
+    <label for="password">密碼：</label>
+    <input type="password" id="password" name="password">
+    <input type="submit" value="登入" onclick="validateForm()">
+</div>
+
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username == "" || password == "") {
+                alert("要輸入用戶名和密碼喔");
+                return false;
+            } else {
+                if (username === "admin" && password === "123") {
+                    alert("Login successful!");
+                    window.location.href = "aboutme.html";
+                } else {
+                    alert("Login failed. Please try again..-");
+
+
+
+
+                }
+            }
+        }
+    </script>
+</body>
+</html>
